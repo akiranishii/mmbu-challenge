@@ -26,44 +26,38 @@ export function Header() {
 
 export function HeroMotion() {
   const video = useRef<HTMLVideoElement>(null);
-  const [phase, setPhase] = useState<'intro' | 'video' | 'outro'>('intro');
-  const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (preference.matches) setPaused(true);
+    setPaused(preference.matches);
     const change = (event: MediaQueryListEvent) => { if (event.matches) setPaused(true); };
     preference.addEventListener('change', change);
     return () => preference.removeEventListener('change', change);
   }, []);
 
   useEffect(() => {
-    if (paused) { video.current?.pause(); return; }
-    if (phase === 'video') {
-      video.current?.play().catch(() => { setPaused(true); setPhase('intro'); });
-      return;
-    }
-    const timer = window.setTimeout(() => {
-      if (phase === 'intro') { setPhase('video'); }
-      else { if (video.current) video.current.currentTime = 0; setProgress(0); setPhase('intro'); }
-    }, phase === 'intro' ? 1800 : 2200);
-    return () => window.clearTimeout(timer);
-  }, [phase, paused]);
+    const element = video.current;
+    if (!element) return;
+    element.defaultPlaybackRate = 0.5;
+    element.playbackRate = 0.5;
+    if (paused) { element.pause(); return; }
+    let active = true;
+    element.play().catch(() => { if (active) setPaused(true); });
+    return () => { active = false; element.pause(); };
+  }, [paused]);
 
   return <div className="hero-media">
-    <div className={`motion-stage phase-${phase}`}>
-      <video ref={video} width="960" height="384" muted playsInline preload="auto" poster={assetPath('/assets/mmbu-logo.png')} aria-label="Animated mosaic of biomedical imagery"
-        onEnded={() => { setPhase('outro'); setProgress(100); }}
-        onError={() => { setPhase('intro'); setPaused(true); }}
+    <div className="motion-stage">
+      <video ref={video} width="1488" height="592" muted loop playsInline preload="auto" aria-label="Animated mosaic of biomedical imagery"
+        onLoadedMetadata={(event) => { event.currentTarget.defaultPlaybackRate = 0.5; event.currentTarget.playbackRate = 0.5; }}
+        onError={() => setPaused(true)}
         onTimeUpdate={() => { const el = video.current; if (el?.duration) setProgress((el.currentTime / el.duration) * 100); }}>
-        <source src={assetPath('/assets/mmbu-mosaic.mp4')} type="video/mp4" />
+        <source src={assetPath('/assets/mmbu-hero.mp4')} type="video/mp4" />
       </video>
-      <div className="logo-frame" aria-hidden={phase === 'video'}>
-        <img src={assetPath('/assets/mmbu-logo.png')} alt="MMBU mosaic banner with GXL, Anthropic, Stanford AI Lab, Highlanders, and AWS" width="1728" height="688" fetchPriority="high" />
-      </div>
       <button className="motion-toggle" onClick={() => setPaused(!paused)} aria-label={paused ? 'Play animation' : 'Pause animation'}>{paused ? <Play size={15} fill="currentColor" /> : <Pause size={15} fill="currentColor" />}</button>
-      <div className="motion-progress" aria-hidden="true"><span style={{ width: `${phase === 'outro' ? 100 : progress}%` }} /></div>
+      <div className="motion-progress" aria-hidden="true"><span style={{ width: `${progress}%` }} /></div>
     </div>
   </div>;
 }

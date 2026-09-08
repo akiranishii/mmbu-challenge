@@ -45,10 +45,9 @@ The deployable static output is `site/dist/client/`; server build files are not 
 - `site/lib/original-source.html`: snapshot of the supplied MMBU website, retrieved September 8, 2026.
 - `site/public/Challenge.pdf`: original challenge brief.
 - `site/public/assets/figure-2.jpg`: original task figure.
-- `site/public/assets/mmbu-logo.png`: supplied logo, unchanged.
-- `site/public/assets/mmbu-mosaic.mp4`: supplied animation, unchanged.
+- `site/public/assets/mmbu-hero.mp4`: supplied `new.mp4`, unchanged; the browser plays it at half speed.
 - `site/public/assets/sponsors/`: all five supplied sponsor logos, unchanged. Their display frames omit empty image margins with CSS.
 
-The hero uses the 960 × 384 MP4 as a full-width background, with the title and application buttons layered over a dark readability gradient. The video fills the hero with proportional cropping as the screen changes; the original video file is not re-encoded. It plays a sequence of the logo (1.8 seconds), the supplied MP4, then the logo (2.2 seconds), repeating. It includes a pause/play button and respects reduced-motion preferences. The logo frames are composed by the website and fit in full on mobile.
+The hero uses the 1488 × 592 `new.mp4` as a full-width background, with the title and application buttons layered over a dark readability gradient. It loops continuously at 0.5× speed (about 10 seconds per loop), without a poster image or logo opening/closing frames. The video fills the hero with proportional cropping as the screen changes; the original video file is not re-encoded. It includes a pause/play button and respects reduced-motion preferences.
 
 The original application email, paper, MARVL, contact, and brief links are preserved.
