@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMBU Challenge</title>
+  <meta name="description" content="The Massive Multimodal Biomedical Understanding Challenge. Organized by Stanford MARVL.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#home">MMBU</a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <img class="hero-img" src="assets/banner.jpg" alt="MMBU mosaic banner with GXL, Anthropic, Stanford AI Lab, Highlanders, and AWS">
+      <div class="hero-copy">
+        <p class="hero-kicker">Stanford MARVL</p>
+        <h1>MMBU Challenge</h1>
+        <p class="hero-sub">Advance visual perception in biomedical multimodal models.</p>
+        <div class="hero-actions">
+          <a class="btn btn-fill" href="mailto:rdcunha@stanford.edu,lozanoe@stanford.edu?subject=MMBU%20Challenge%20registration">Apply to participate</a>
+          <a class="btn btn-line" href="Challenge.pdf">Challenge brief</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Challenge snapshot">
+      <div class="wrap stats-row">
+        <div><strong>3</strong><span>tracks</span></div>
+        <div><strong>4</strong><span>task types</span></div>
+        <div><strong>2</strong><span>eval passes</span></div>
+        <div><strong>6</strong><span>context fields</span></div>
+      </div>
+    </section>
+
+    <section class="block" id="about">
+      <div class="wrap">
+        <p class="kicker">About</p>
+        <h2>Massive Multimodal Biomedical Understanding</h2>
+        <p class="lead">MMBU is a large-scale challenge from Stanford MARVL to improve how multimodal models perceive biomedical images — across modalities, scales, anatomy, and clinical context.</p>
+        <p>Frontier models can produce a correct answer while failing to name what they are looking at. This challenge targets that gap: recognize, localize, and characterize visual features, then prove you actually saw them.</p>
+        <img class="shot" src="assets/figure-2.jpg" alt="Example MMBU tasks: classification, detection, and segmentation">
+      </div>
+    </section>
+
+    <section class="block block-dim" id="tracks">
+      <div class="wrap">
+        <p class="kicker">Tracks</p>
+        <h2>Pick a track. Submit one model.</h2>
+        <p class="lead">A checkpoint can enter only one track. Models over 27B active parameters need an API key for evaluation.</p>
+        <div class="cards">
+          <article class="card">
+            <p class="card-tag">Track 1</p>
+            <h3>Open Frontier</h3>
+            <p>Best overall performance. No size cap. Pretrain, mid-train, and post-train must come from the same organization.</p>
+          </article>
+          <article class="card">
+            <p class="card-tag">Track 2</p>
+            <h3>Domain Adaptation</h3>
+            <p>Adapt a disclosed base model toward medicine. Ranked by improvement over that base, not by starting strength.</p>
+          </article>
+          <article class="card">
+            <p class="card-tag">Track 3</p>
+            <h3>Efficient Inference</h3>
+            <p>Small models only: ≤ 4B active parameters and ≤ 12B total. Strong perception with less compute.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="sponsors">
+      <div class="wrap">
+        <p class="kicker">Sponsors</p>
+        <h2>Thanks to our partners</h2>
+        <p class="lead">Official sponsors of the MMBU Challenge. Collaborator institutions are named in the FAQ, in text only.</p>
+        <ul class="sponsor-row">
+          <li>GXL</li>
+          <li>Anthropic</li>
+          <li>Stanford AI Lab</li>
+          <li>Highlanders</li>
+          <li>AWS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block block-dim" id="faq">
+      <div class="wrap wrap-narrow">
+        <p class="kicker">FAQ</p>
+        <h2>Common questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>What is this challenge?</summary>
+            <p>MMBU evaluates open-ended visual question answering on a peer-reviewed biomedical benchmark. Models must recognize, localize, and characterize visual features — then identify imaging metadata in a separate pass, so they cannot shortcut the answer.</p>
+          </details>
+          <details>
+            <summary>How do I participate?</summary>
+            <p>Teams must apply and be accepted before competing. Email the organizers with your team name, members, affiliations, and tracks. One person, one team, unless the organizers approve otherwise. Dates go out to accepted teams.</p>
+          </details>
+          <details>
+            <summary>How is scoring done?</summary>
+            <p>Two independent passes on the hidden set. Pass 1 is the task answer (T). Pass 2 is biomedical context (C): modality, submodality, specimen, body part, stain, and domain. The shared base score is 0.8T + 0.2C. Each track then applies its own rule. Ties break on T. Sonnet-5 is the judge.</p>
+          </details>
+          <details>
+            <summary>What are the main rules?</summary>
+            <p>Single end-to-end VLM. No ensembles, retrieval, web search, or extra tools at eval. Official harness only, one pass per example. Models under 27B (and all of Track 3) must be public on Hugging Face. Disclose training data. Do not train on hidden evaluation examples. Full rules are in the <a href="Challenge.pdf">challenge brief</a>.</p>
+          </details>
+          <details>
+            <summary>Where is the data?</summary>
+            <p>A public development set will be released for local evaluation. Final rankings use a private held-out set of open-ended VQA only. Dev-set scores will not match the final leaderboard.</p>
+          </details>
+          <details>
+            <summary>Who organizes MMBU?</summary>
+            <p>Stanford MARVL, led by Serena Yeung-Levy. Primary organizers: Ryan D’Cunha, Alejandro Lozano, Akira Nishii, and Maximilian Rokuss. Sponsors may participate because only organizers see the private set.</p>
+          </details>
+          <details>
+            <summary>Who are the collaborators?</summary>
+            <p>Individual researchers advising on design — not institutional partners, and not sponsors. Affiliations for identification only: Stanford, Cambridge, University of Washington, MD Anderson, Microsoft AI, Google DeepMind, and Apple. Their logos are not used on this site.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p>MMBU Challenge · Stanford MARVL</p>
+      <div class="footer-links">
+        <a href="Challenge.pdf">Brief</a>
+        <a href="https://arxiv.org/abs/2606.06696" rel="noopener noreferrer" target="_blank">Paper</a>
+        <a href="https://marvl.stanford.edu/" rel="noopener noreferrer" target="_blank">MARVL</a>
+        <a href="mailto:rdcunha@stanford.edu">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

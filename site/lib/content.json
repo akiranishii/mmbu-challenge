@@ -1,0 +1,82 @@
+{
+  "about": {
+    "label": "About",
+    "heading": "Massive Multimodal Biomedical Understanding",
+    "paragraphs": [
+      "MMBU is a large-scale challenge from Stanford MARVL to improve how multimodal models perceive biomedical images — across modalities, scales, anatomy, and clinical context.",
+      "Frontier models can produce a correct answer while failing to name what they are looking at. This challenge targets that gap: recognize, localize, and characterize visual features, then prove you actually saw them."
+    ]
+  },
+  "tracks": {
+    "label": "Tracks",
+    "heading": "Pick a track. Submit one model.",
+    "paragraphs": [
+      "A checkpoint can enter only one track. Models over 27B active parameters need an API key for evaluation."
+    ],
+    "items": [
+      {
+        "label": "Track 1",
+        "name": "Open Frontier",
+        "description": "Best overall performance. No size cap. Pretrain, mid-train, and post-train must come from the same organization."
+      },
+      {
+        "label": "Track 2",
+        "name": "Domain Adaptation",
+        "description": "Adapt a disclosed base model toward medicine. Ranked by improvement over that base, not by starting strength."
+      },
+      {
+        "label": "Track 3",
+        "name": "Efficient Inference",
+        "description": "Small models only: ≤ 4B active parameters and ≤ 12B total. Strong perception with less compute."
+      }
+    ]
+  },
+  "sponsors": {
+    "label": "Sponsors",
+    "heading": "Thanks to our partners",
+    "paragraphs": [
+      "Official sponsors of the MMBU Challenge. Collaborator institutions are named in the FAQ, in text only."
+    ],
+    "names": [
+      "GXL",
+      "Anthropic",
+      "Stanford AI Lab",
+      "Highlanders",
+      "AWS"
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Common questions",
+    "items": [
+      {
+        "question": "What is this challenge?",
+        "answer": "MMBU evaluates open-ended visual question answering on a peer-reviewed biomedical benchmark. Models must recognize, localize, and characterize visual features — then identify imaging metadata in a separate pass, so they cannot shortcut the answer."
+      },
+      {
+        "question": "How do I participate?",
+        "answer": "Teams must apply and be accepted before competing. Email the organizers with your team name, members, affiliations, and tracks. One person, one team, unless the organizers approve otherwise. Dates go out to accepted teams."
+      },
+      {
+        "question": "How is scoring done?",
+        "answer": "Two independent passes on the hidden set. Pass 1 is the task answer (T). Pass 2 is biomedical context (C): modality, submodality, specimen, body part, stain, and domain. The shared base score is 0.8T + 0.2C. Each track then applies its own rule. Ties break on T. Sonnet-5 is the judge."
+      },
+      {
+        "question": "What are the main rules?",
+        "answer": "Single end-to-end VLM. No ensembles, retrieval, web search, or extra tools at eval. Official harness only, one pass per example. Models under 27B (and all of Track 3) must be public on Hugging Face. Disclose training data. Do not train on hidden evaluation examples. Full rules are in the <a href=\"/Challenge.pdf\">challenge brief</a>."
+      },
+      {
+        "question": "Where is the data?",
+        "answer": "A public development set will be released for local evaluation. Final rankings use a private held-out set of open-ended VQA only. Dev-set scores will not match the final leaderboard."
+      },
+      {
+        "question": "Who organizes MMBU?",
+        "answer": "Stanford MARVL, led by Serena Yeung-Levy. Primary organizers: Ryan D’Cunha, Alejandro Lozano, Akira Nishii, and Maximilian Rokuss. Sponsors may participate because only organizers see the private set."
+      },
+      {
+        "question": "Who are the collaborators?",
+        "answer": "Individual researchers advising on design — not institutional partners, and not sponsors. Affiliations for identification only: Stanford, Cambridge, University of Washington, MD Anderson, Microsoft AI, Google DeepMind, and Apple. Their logos are not used on this site."
+      }
+    ]
+  }
+}
