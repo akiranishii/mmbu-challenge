@@ -9,7 +9,7 @@ const html = await readFile(resolve(directory, 'index.html'), 'utf8');
 const paths = new Set();
 
 assert(html.includes('id="hero-title"'), 'The export must contain the rendered MMBU page.');
-assert(html.includes('<video'), 'The export must include the hero animation.');
+assert(html.includes('class="hero-art"'), 'The export must include the square hero image.');
 
 for (const [, value] of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)) {
   if (value.startsWith('#') || value.startsWith('mailto:') || value.startsWith('data:')) continue;
@@ -25,7 +25,7 @@ for (const [, value] of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)) {
 }
 
 for (const path of [
-  '/Challenge.pdf', '/favicon.svg', '/assets/mmbu-hero.mp4',
+  '/Challenge.pdf', '/favicon.svg', '/assets/mmbu-logo-updated.png',
   '/assets/figure-2.jpg', '/assets/sponsors/gxl.svg', '/assets/sponsors/anthropic.png',
   '/assets/sponsors/stanford-ai-lab.png', '/assets/sponsors/highlanders.png', '/assets/sponsors/aws.webp',
 ]) assert(paths.has(path), `The exported page is missing a required asset: ${path}`);

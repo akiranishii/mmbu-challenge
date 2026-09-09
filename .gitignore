@@ -13,5 +13,6 @@
 
 # Original input assets are retained locally; the site/public copies are deployed.
 /logo.png
+/logo_updated.png
 /logo/
 /*.mp4

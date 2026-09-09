@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowUpRight, MoveUpRight, Scan, Focus, Gauge } from 'lucide-react';
 import content from '@/lib/content.json';
 import { assetPath } from '@/lib/asset-path';
-import { Header, HeroMotion, Questions } from './site-interactions';
+import { Header, Questions } from './site-interactions';
 
 export const dynamic = 'force-static';
 
@@ -23,7 +23,6 @@ export default function Home() {
       <Header />
       <main id="main">
         <section className="hero" id="home" aria-labelledby="hero-title">
-          <HeroMotion />
           <div className="hero-inner page-width">
             <div className="hero-copy">
               <p className="eyebrow"><span className="status-dot" />Stanford MARVL</p>
@@ -33,6 +32,9 @@ export default function Home() {
                 <a className="button button-primary" href={registration}>Apply to participate<ArrowUpRight size={20} /></a>
                 <a className="button button-outline" href={assetPath('/Challenge.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
               </div>
+            </div>
+            <div className="hero-art">
+              <img src={assetPath('/assets/mmbu-logo-updated.png')} width="2380" height="2380" alt="MMBU logo over a mosaic of biomedical images, with Anthropic, GXL, and Highlanders" fetchPriority="high" />
             </div>
           </div>
           <div className="hero-bottom page-width">
