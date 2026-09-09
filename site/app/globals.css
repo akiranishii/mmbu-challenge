@@ -64,7 +64,7 @@ h1 span { color: var(--lime); }
 .button-primary:hover { background: #e5ffb6; }
 .button-outline { border: 1px solid #597065; color: #f0f4ec; }
 .button-outline:hover { background: #ffffff0d; }
-.hero-art { width: 85%; max-width: 480px; aspect-ratio: 1; justify-self: start; overflow: hidden; border-radius: 6px; }
+.hero-art { width: 85%; max-width: 480px; aspect-ratio: 1; justify-self: start; margin-inline-start: 24px; overflow: hidden; border-radius: 6px; }
 .hero-art img { display: block; width: 100%; height: auto; object-fit: contain; }
 .hero-bottom { display: flex; align-items: end; justify-content: space-between; padding-block: 18px 28px; }
 .hero-bottom > span { font-size: 12px; line-height: 1.6; color: #e0e9db; letter-spacing: .35px; }
@@ -159,7 +159,7 @@ h2 span { color: #6b7f6c; }
   .mobile-menu nav { display: flex; flex-direction: column; }
   .mobile-menu a { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid #e6ece2; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 52px 28px; }
-  .hero-art { width: 100%; max-width: 440px; justify-self: center; }
+  .hero-art { width: 100%; max-width: 440px; justify-self: center; margin-inline-start: 0; }
   .hero .eyebrow { margin-bottom: 27px; }
   h1 { font-size: clamp(65px, 14vw, 102px); }
   .hero-description { font-size: 21px; margin-top: 26px; max-width: 390px; }
