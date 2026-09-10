@@ -45,9 +45,9 @@ The deployable static output is `site/dist/client/`; server build files are not 
 - `site/lib/original-source.html`: snapshot of the supplied MMBU website, retrieved September 8, 2026.
 - `site/public/Challenge.pdf`: original challenge brief.
 - `site/public/assets/figure-2.jpg`: original task figure.
-- `site/public/assets/mmbu-logo-updated.png`: supplied `logo_updated.png`, unchanged.
-- `site/public/assets/sponsors/`: all five supplied sponsor logos, unchanged. Their display frames omit empty image margins with CSS.
+- `site/public/assets/no_logo.png`: supplied `no_logo.png`, unchanged.
+- `site/public/assets/sponsors/`: all six supplied sponsor logos, including Biohub, unchanged. Their display frames omit empty image margins with CSS.
 
-The hero displays the 2380 × 2380 `logo_updated.png` across the entire banner behind the title and application buttons. CSS `object-fit: cover` preserves the image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
+The hero displays the 2380 × 2380 `no_logo.png` across the entire banner behind the title and application buttons. CSS `object-fit: cover` preserves the image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
 
 The original application email, paper, MARVL, contact, and brief links are preserved.

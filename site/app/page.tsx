@@ -13,6 +13,7 @@ const sponsorLogos = [
   { src: 'stanford-ai-lab.png', width: 1998, height: 787, bounds: [0, 0, 1998, 787] },
   { src: 'highlanders.png', width: 2103, height: 748, bounds: [180, 278, 1770, 175] },
   { src: 'aws.webp', width: 1280, height: 767, bounds: [0, 0, 1280, 767] },
+  { src: 'biohub_logo.png', width: 524, height: 164, bounds: [0, 0, 524, 164] },
 ];
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="home" aria-labelledby="hero-title">
           <div className="hero-art" aria-hidden="true">
-            <img src={assetPath('/assets/mmbu-logo-updated.png')} width="2380" height="2380" alt="" fetchPriority="high" />
+            <img src={assetPath('/assets/no_logo.png')} width="2380" height="2380" alt="" fetchPriority="high" />
           </div>
           <div className="hero-inner page-width">
             <div className="hero-copy">
