@@ -1,12 +1,11 @@
-import { ArrowDown, ArrowUpRight, MoveUpRight, Scan, Focus, Gauge } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, MoveUpRight } from 'lucide-react';
 import content from '@/lib/content.json';
 import { assetPath } from '@/lib/asset-path';
-import { Header, Questions } from './site-interactions';
+import { Header, Questions, Tracks } from './site-interactions';
 
 export const dynamic = 'force-static';
 
 const registration = 'https://luma.com/28k1tyd3';
-const trackIcons = [Scan, Focus, Gauge];
 // Display the supplied artwork within its visible bounds, retaining the original files.
 const sponsorLogos = [
   { src: 'gxl.svg', width: 644, height: 285, bounds: [60, 60, 524, 165] },
@@ -68,19 +67,10 @@ export default function Home() {
               <h2 id="tracks-title">Pick a track.<br /><span>Submit one model.</span></h2>
               <p className="lead">{content.tracks.paragraphs[0]}</p>
             </div>
-            <div className="track-grid">
-              {content.tracks.items.map((track, i) => {
-                const Icon = trackIcons[i];
-                return <article className="track-card" key={track.name}>
-                  <div className="track-top"><p className="eyebrow">{track.label}</p><Icon size={25} strokeWidth={1.3} /></div>
-                  <span className="track-number" aria-hidden="true">0{i + 1}</span>
-                  <h3>{track.name}</h3>
-                  <p>{track.description}</p>
-                </article>;
-              })}
-            </div>
+            <Tracks />
           </div>
         </section>
+
         <section className="section sponsors-section page-width" id="sponsors" aria-labelledby="sponsors-title">
           <p className="eyebrow section-label"><span>03</span>{content.sponsors.label}</p>
           <h2 id="sponsors-title">{content.sponsors.heading}</h2>

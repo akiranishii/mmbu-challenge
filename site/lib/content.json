@@ -17,17 +17,38 @@
       {
         "label": "Track 1",
         "name": "Open Frontier",
-        "description": "Best overall performance. No size cap. Pretrain, mid-train, and post-train must come from the same organization."
+        "description": "Best overall performance. No size cap. Pretrain, mid-train, and post-train must come from the same organization.",
+        "objective": "Best overall performance.",
+        "body": "Submit the strongest biomedical perception model. There is no size limit. Models with more than 27B active parameters must be available for evaluation through an API key.",
+        "facts": [
+          { "label": "Size", "value": "No limit." },
+          { "label": "Training", "value": "Pretrain, mid-train, and post-train must come from the same organization." },
+          { "label": "Scoring", "value": "0.8 × task + 0.2 × biomedical context." }
+        ]
       },
       {
         "label": "Track 2",
         "name": "Domain Adaptation",
-        "description": "Adapt a disclosed base model toward medicine. Ranked by improvement over that base, not by starting strength."
+        "description": "Adapt a disclosed base model toward medicine. Ranked by improvement over that base, not by starting strength.",
+        "objective": "Improvement over a disclosed base model.",
+        "body": "Adapt a pretrained model toward medicine through mid-training or post-training. Ranking rewards the value added by that adaptation, not the strength of the starting checkpoint. Models with more than 27B active parameters need an API key.",
+        "facts": [
+          { "label": "Size", "value": "No limit." },
+          { "label": "Base model", "value": "Must be disclosed." },
+          { "label": "Scoring", "value": "(0.8T + 0.2C) × (adapted accuracy − base accuracy). A model that does worse than its base ranks below no improvement." }
+        ]
       },
       {
         "label": "Track 3",
         "name": "Efficient Inference",
-        "description": "Small models only: ≤ 4B active parameters and ≤ 12B total. Strong perception with less compute."
+        "description": "Small models only: ≤ 4B active parameters and ≤ 12B total. Strong perception with less compute.",
+        "objective": "Maximum perception with minimal computation.",
+        "body": "Pretrain or adapt a small biomedical model. This track is for parameter-efficient models that keep strong biomedical perception. Disclose the number of active parameters.",
+        "facts": [
+          { "label": "Size", "value": "≤ 4B active parameters and ≤ 12B total (for example, MoE)." },
+          { "label": "Base model", "value": "If the model is adapted, the base model must be disclosed." },
+          { "label": "Scoring", "value": "(0.8T + 0.2C) scaled by an efficiency bonus for fewer active parameters. The bonus strength is announced to registered teams before the challenge ends." }
+        ]
       }
     ]
   },

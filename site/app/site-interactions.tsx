@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Focus, Gauge, Menu, Scan, X } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import content from '@/lib/content.json';
 import { assetPath } from '@/lib/asset-path';
+
+const trackIcons = [Scan, Focus, Gauge];
 
 const sections = ['Home', 'About', 'Tracks', 'Sponsors', 'FAQ'];
 
@@ -22,6 +24,32 @@ export function Header() {
       </Collapsible>
     </div>
   </header>;
+}
+
+export function Tracks() {
+  return <div className="track-grid">
+    {content.tracks.items.map((track, i) => {
+      const Icon = trackIcons[i];
+      return <article className="track-card" key={track.name}>
+        <Collapsible className="track-fold">
+          <CollapsibleTrigger className="track-trigger">
+            <div className="track-top"><p className="eyebrow">{track.label}</p><Icon size={25} strokeWidth={1.3} /></div>
+            <span className="track-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{track.name}</h3>
+            <p>{track.description}</p>
+            <span className="track-more">Track details<ChevronDown size={16} /></span>
+          </CollapsibleTrigger>
+          <CollapsibleContent className="track-panel" keepMounted>
+            <div className="track-details">
+              <p className="track-objective">{track.objective}</p>
+              <p>{track.body}</p>
+              <ul className="track-facts">{track.facts.map(fact => <li key={fact.label}><strong>{fact.label}</strong><span>{fact.value}</span></li>)}</ul>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+      </article>;
+    })}
+  </div>;
 }
 
 export function Questions() {
