@@ -41,11 +41,6 @@ export default function Home() {
             <a href="#about" aria-label="About the MMBU Challenge"><ArrowDown size={21} /></a>
           </div>
         </section>
-        <section className="snapshot page-width" aria-label="Challenge snapshot">
-          {[['3', 'tracks'], ['4', 'task types'], ['2', 'eval passes'], ['6', 'context fields']].map(([number, label]) => (
-            <div className="stat" key={label}><strong>{number}</strong><span>{label}</span></div>
-          ))}
-        </section>
         <section className="section about-section page-width" id="about" aria-labelledby="about-title">
           <div className="section-heading">
             <p className="eyebrow section-label"><span>01</span>{content.about.label}</p>
@@ -70,9 +65,17 @@ export default function Home() {
             <Tracks />
           </div>
         </section>
-
+        <section className="prizes-section" id="prizes" aria-labelledby="prizes-title">
+          <div className="page-width section">
+            <div className="section-heading">
+              <p className="eyebrow section-label"><span>03</span>{content.prizes.label}</p>
+              <h2 id="prizes-title">Resources &<br /><span>Prizes</span></h2>
+              <p className="lead">{content.prizes.paragraphs[0]}</p>
+            </div>
+          </div>
+        </section>
         <section className="section sponsors-section page-width" id="sponsors" aria-labelledby="sponsors-title">
-          <p className="eyebrow section-label"><span>03</span>{content.sponsors.label}</p>
+          <p className="eyebrow section-label"><span>04</span>{content.sponsors.label}</p>
           <h2 id="sponsors-title">{content.sponsors.heading}</h2>
           <p className="lead">{content.sponsors.paragraphs[0]}</p>
           <ul className="sponsor-row">{content.sponsors.names.map((name, i) => {
@@ -89,7 +92,7 @@ export default function Home() {
         <section className="faq-section" id="faq" aria-labelledby="faq-title">
           <div className="page-width section faq-layout">
             <div className="section-heading">
-              <p className="eyebrow section-label"><span>04</span>{content.faq.label}</p>
+              <p className="eyebrow section-label"><span>05</span>{content.faq.label}</p>
               <h2 id="faq-title">Common<br /><span>questions</span></h2>
             </div>
             <Questions />

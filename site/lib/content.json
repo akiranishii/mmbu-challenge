@@ -52,6 +52,13 @@
       }
     ]
   },
+  "prizes": {
+    "label": "Resources",
+    "heading": "Resources & Prizes",
+    "paragraphs": [
+      "Teams receive a public development set, weekly office hours with the organizers, special credits from Anthropic and GXL, and $20k+ in cash prizes. The top entry in each track will also be invited to contribute to the MMBU Challenge technical report."
+    ]
+  },
   "sponsors": {
     "label": "Sponsors",
     "heading": "Thanks to our partners",
@@ -76,7 +83,7 @@
       },
       {
         "question": "How do I participate?",
-        "answer": "Teams must apply and be accepted before competing. Email the organizers with your team name, members, affiliations, and tracks. One person, one team, unless the organizers approve otherwise. Dates go out to accepted teams."
+        "answer": "Teams must apply and be accepted before competing. Please apply to participate using the <a href=\"https://luma.com/28k1tyd3\" target=\"_blank\" rel=\"noopener noreferrer\">LUMA event page</a>."
       },
       {
         "question": "How is scoring done?",

@@ -9,7 +9,7 @@ import { assetPath } from '@/lib/asset-path';
 
 const trackIcons = [Scan, Focus, Gauge];
 
-const sections = ['Home', 'About', 'Tracks', 'Sponsors', 'FAQ'];
+const sections = ['Home', 'About', 'Tracks', 'Prizes', 'Sponsors', 'FAQ'];
 
 export function Header() {
   const [open, setOpen] = useState(false);
