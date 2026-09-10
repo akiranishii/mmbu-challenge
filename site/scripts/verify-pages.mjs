@@ -9,7 +9,7 @@ const html = await readFile(resolve(directory, 'index.html'), 'utf8');
 const paths = new Set();
 
 assert(html.includes('id="hero-title"'), 'The export must contain the rendered MMBU page.');
-assert(html.includes('class="hero-art"'), 'The export must include the square hero image.');
+assert(html.includes('class="hero-art"'), 'The export must include the hero background image.');
 
 for (const [, value] of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)) {
   if (value.startsWith('#') || value.startsWith('mailto:') || value.startsWith('data:')) continue;

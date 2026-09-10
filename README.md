@@ -1,6 +1,6 @@
 # MMBU Challenge
 
-The website is in `site/`. It preserves the content of the [original MMBU Challenge website](https://alejandro-lozano-dev.github.io/MMBU.Challenge/) with a responsive design and a square logo beside the hero text.
+The website is in `site/`. It preserves the content of the [original MMBU Challenge website](https://alejandro-lozano-dev.github.io/MMBU.Challenge/) with a responsive design and a full-width image behind the hero text.
 
 ## Run locally
 
@@ -48,6 +48,6 @@ The deployable static output is `site/dist/client/`; server build files are not 
 - `site/public/assets/mmbu-logo-updated.png`: supplied `logo_updated.png`, unchanged.
 - `site/public/assets/sponsors/`: all five supplied sponsor logos, unchanged. Their display frames omit empty image margins with CSS.
 
-The hero displays the 2380 × 2380 `logo_updated.png` as an uncropped square alongside the title and application buttons. On mobile, the image sits below the text and buttons. The hero uses a solid green background and no video.
+The hero displays the 2380 × 2380 `logo_updated.png` across the entire banner behind the title and application buttons. CSS `object-fit: cover` preserves the image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
 
 The original application email, paper, MARVL, contact, and brief links are preserved.
