@@ -5,7 +5,7 @@ import { Header, Questions } from './site-interactions';
 
 export const dynamic = 'force-static';
 
-const registration = 'mailto:rdcunha@stanford.edu,lozanoe@stanford.edu?subject=MMBU%20Challenge%20registration';
+const registration = 'https://luma.com/28k1tyd3';
 const trackIcons = [Scan, Focus, Gauge];
 // Display the supplied artwork within its visible bounds, retaining the original files.
 const sponsorLogos = [
@@ -32,7 +32,7 @@ export default function Home() {
               <h1 id="hero-title">MMBU<br /><span>Challenge</span></h1>
               <p className="hero-description">Advance visual perception in biomedical multimodal models.</p>
               <div className="hero-actions">
-                <a className="button button-primary" href={registration}>Apply to participate<ArrowUpRight size={20} /></a>
+                <a className="button button-primary" href={registration} target="_blank" rel="noopener noreferrer">Apply to participate<ArrowUpRight size={20} /></a>
                 <a className="button button-outline" href={assetPath('/Challenge.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
               </div>
             </div>

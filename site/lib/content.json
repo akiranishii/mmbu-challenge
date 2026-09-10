@@ -3,8 +3,8 @@
     "label": "About",
     "heading": "Massive Multimodal Biomedical Understanding",
     "paragraphs": [
-      "MMBU is a large-scale challenge from Stanford MARVL to improve how multimodal models perceive biomedical images — across modalities, scales, anatomy, and clinical context.",
-      "Frontier models can produce a correct answer while failing to name what they are looking at. This challenge targets that gap: recognize, localize, and characterize visual features, then prove you actually saw them."
+      "The MMBU Challenge aims to improve how multimodal models perceive biomedical images across modalities, scales, and anatomical regions.",
+      "Today’s multimodal large language models (MLLMs) can produce seemingly impressive biomedical answers. But beneath these capabilities lies a fundamental weakness: they may not even understand what they are looking at.\n\nIn biomedical MLLMs, visual perception remains the primary bottleneck for reliable downstream reasoning. So we built a challenge to put biomedical visual understanding to the test."
     ]
   },
   "tracks": {
