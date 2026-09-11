@@ -70,7 +70,6 @@
       "Anthropic",
       "Stanford AI Lab",
       "Highlanders",
-      "AWS",
       "Biohub"
     ]
   },
@@ -92,7 +91,7 @@
       },
       {
         "question": "What are the main rules?",
-        "answer": "Single end-to-end VLM. No ensembles, retrieval, web search, or extra tools at eval. Official harness only, one pass per example. Models under 27B (and all of Track 3) must be public on Hugging Face. Disclose training data. Do not train on hidden evaluation examples. Full rules are in the <a href=\"/Challenge.pdf\">challenge brief</a>."
+        "answer": "Single end-to-end VLM. No ensembles, retrieval, web search, or extra tools at eval. Official harness only, one pass per example. Models under 27B (and all of Track 3) must be public on Hugging Face. Disclose training data. Do not train on hidden evaluation examples. Full rules are in the <a href=\"/MMBU_challenge.pdf\">challenge brief</a>."
       },
       {
         "question": "Where is the data?",

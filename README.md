@@ -43,11 +43,11 @@ The deployable static output is `site/dist/client/`; server build files are not 
 
 - `site/lib/content.json`: original overview, tracks, sponsors, and FAQ wording.
 - `site/lib/original-source.html`: snapshot of the supplied MMBU website, retrieved September 8, 2026.
-- `site/public/Challenge.pdf`: original challenge brief.
+- `site/public/MMBU_challenge.pdf`: latest supplied challenge brief, used by both buttons and the FAQ and footer links.
 - `site/public/assets/figure-2.jpg`: original task figure.
 - `site/public/assets/no_logo.png`: supplied `no_logo.png`, unchanged.
-- `site/public/assets/sponsors/`: all six supplied sponsor logos, including Biohub, unchanged. Their display frames omit empty image margins with CSS.
+- `site/public/assets/sponsors/`: supplied sponsor logos, unchanged. Five logos are displayed, including Biohub; AWS is temporarily hidden. Their display frames omit empty image margins with CSS.
 
 The hero displays the 2380 × 2380 `no_logo.png` across the entire banner behind the title and application buttons. CSS `object-fit: cover` preserves the image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
 
-The original application email, paper, MARVL, contact, and brief links are preserved.
+The application button opens the Luma registration page. The paper, MARVL, and contact links are preserved.

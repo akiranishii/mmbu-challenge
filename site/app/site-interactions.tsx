@@ -17,7 +17,7 @@ export function Header() {
     <div className="nav-inner page-width">
       <a href="#home" className="wordmark" aria-label="MMBU home">MMBU<span className="brand-dot" /></a>
       <nav className="desktop-nav" aria-label="Main navigation">{sections.map(section => <a key={section} href={`#${section.toLowerCase()}`}>{section}</a>)}</nav>
-      <a className="nav-brief" href={assetPath('/Challenge.pdf')}>Challenge brief<ArrowUpRight size={16} /></a>
+      <a className="nav-brief" href={assetPath('/MMBU_challenge.pdf')}>Challenge brief<ArrowUpRight size={16} /></a>
       <Collapsible open={open} onOpenChange={setOpen} className="mobile-navigation">
         <CollapsibleTrigger className="menu-toggle" aria-label={open ? 'Close menu' : 'Open menu'}>{open ? <X /> : <Menu />}</CollapsibleTrigger>
         <CollapsibleContent className="mobile-menu"><nav aria-label="Mobile navigation">{sections.map(section => <a key={section} href={`#${section.toLowerCase()}`} onClick={() => setOpen(false)}>{section}<ArrowUpRight size={18} /></a>)}</nav></CollapsibleContent>
@@ -56,7 +56,7 @@ export function Questions() {
   return <Accordion className="questions" defaultValue={['question-0']} multiple>
     {content.faq.items.map((item, index) => <AccordionItem key={item.question} value={`question-${index}`} className="question-item">
       <AccordionTrigger className="question-trigger"><span className="question-number">0{index + 1}</span><span>{item.question}</span></AccordionTrigger>
-      <AccordionContent className="question-answer" keepMounted><p dangerouslySetInnerHTML={{ __html: item.answer.replace('href="/Challenge.pdf"', `href="${assetPath('/Challenge.pdf')}"`) }} /></AccordionContent>
+      <AccordionContent className="question-answer" keepMounted><p dangerouslySetInnerHTML={{ __html: item.answer.replace('href="/MMBU_challenge.pdf"', `href="${assetPath('/MMBU_challenge.pdf')}"`) }} /></AccordionContent>
     </AccordionItem>)}
   </Accordion>;
 }
