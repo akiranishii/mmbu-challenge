@@ -50,8 +50,8 @@ export default function Home() {
             <p className="lead">{content.about.paragraphs[0]}</p>
             <p>{content.about.paragraphs[1]}</p>
           </div>
-          <a className="task-figure" href={assetPath('/assets/figure-2.jpg')} target="_blank" rel="noopener noreferrer" aria-label="Open the full-size example MMBU tasks figure">
-            <img src={assetPath('/assets/figure-2.jpg')} alt="Example MMBU tasks: classification, detection, and segmentation" width="1600" height="1600" loading="lazy" />
+          <a className="task-figure" href={assetPath('/assets/figure-2.png')} target="_blank" rel="noopener noreferrer" aria-label="Open the full-size example MMBU tasks figure">
+            <img src={assetPath('/assets/figure-2.png')} alt="Example MMBU open VQA tasks" width="3416" height="4041" loading="lazy" />
             <span className="figure-expand" aria-hidden="true"><MoveUpRight size={20} /></span>
           </a>
         </section>

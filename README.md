@@ -44,7 +44,7 @@ The deployable static output is `site/dist/client/`; server build files are not 
 - `site/lib/content.json`: original overview, tracks, sponsors, and FAQ wording.
 - `site/lib/original-source.html`: snapshot of the supplied MMBU website, retrieved September 8, 2026.
 - `site/public/MMBU_challenge.pdf`: latest supplied challenge brief, used by both buttons and the FAQ and footer links.
-- `site/public/assets/figure-2.jpg`: original task figure.
+- `site/public/assets/figure-2.png`: open VQA task examples figure.
 - `site/public/assets/no_logo.png`: supplied `no_logo.png`, unchanged.
 - `site/public/assets/sponsors/`: supplied sponsor logos, unchanged. Five logos are displayed, including Biohub; AWS is temporarily hidden. Their display frames omit empty image margins with CSS.
 

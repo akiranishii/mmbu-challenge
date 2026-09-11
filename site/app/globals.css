@@ -94,20 +94,20 @@ h2 span { color: #6b7f6c; }
 .tracks-section .lead,
 .prizes-section .lead { align-self: end; color: #586d5c; max-width: 440px; font-size: 17px; }
 .prizes-section .lead { max-width: 560px; }
-.track-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; gap: 20px; align-items: start; }
-.track-card { background: #fff; padding: 28px; border: 1px solid #dfe7dc; border-radius: 8px; transition: border-color .2s, transform .2s; }
+.track-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; gap: 20px; }
+.track-card { display: flex; flex-direction: column; height: 100%; background: #fff; padding: 28px; border: 1px solid #dfe7dc; border-radius: 8px; transition: border-color .2s, transform .2s; }
 .track-card:hover { border-color: #8d9f83; transform: translateY(-4px); }
 .track-card:has([data-open]) { border-color: #8d9f83; transform: none; }
 .track-card:has([data-open]):hover { transform: none; }
-.track-fold { min-width: 0; }
-.track-trigger { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; }
+.track-fold { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.track-trigger { display: flex; flex-direction: column; flex: 1; width: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; }
 .track-top { display: flex; align-items: center; justify-content: space-between; color: #4b634c; }
 .track-number { display: block; color: #dfe9d7; font-size: 90px; font-weight: 400; letter-spacing: -7px; line-height: 1; margin-block: 44px 23px; }
 .track-card:nth-child(2) .track-number { color: #d7e8e2; }
 .track-card:nth-child(3) .track-number { color: #e5e9ce; }
 .track-card h3 { font-size: 25px; letter-spacing: -.9px; font-weight: 500; margin-bottom: 16px; }
 .track-trigger > p { font-size: 16px; line-height: 1.7; color: #607063; }
-.track-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: #4b634c; font-size: 12px; font-weight: 500; letter-spacing: 1.4px; text-transform: uppercase; }
+.track-more { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 20px; color: #4b634c; font-size: 12px; font-weight: 500; letter-spacing: 1.4px; text-transform: uppercase; }
 .track-more svg { transition: transform .2s; }
 .track-trigger[aria-expanded="true"] .track-more svg { transform: rotate(180deg); }
 .track-panel { overflow: hidden; height: var(--collapsible-panel-height); }
