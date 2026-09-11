@@ -46,8 +46,10 @@ The deployable static output is `site/dist/client/`; server build files are not 
 - `site/public/MMBU_challenge.pdf`: latest supplied challenge brief, used by both buttons and the FAQ and footer links.
 - `site/public/assets/figure-2.png`: open VQA task examples figure.
 - `site/public/assets/no_logo.png`: supplied `no_logo.png`, unchanged.
+- `site/public/assets/hero-*.webp`: responsive hero copies at 960, 1600, and 2380 pixels wide, encoded with Pillow at WebP quality 80 and method 6.
+- `site/public/assets/figure-2-*.webp`: responsive About figure copies at 800, 1600, and 2400 pixels wide, encoded at WebP quality 85 and method 6. Clicking the figure still opens the original PNG.
 - `site/public/assets/sponsors/`: supplied sponsor logos, unchanged. Five logos are displayed, including Biohub; AWS is temporarily hidden. Their display frames omit empty image margins with CSS.
 
-The hero displays the 2380 × 2380 `no_logo.png` across the entire banner behind the title and application buttons. CSS `object-fit: cover` preserves the image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
+The hero displays optimized WebP copies of the 2380 × 2380 `no_logo.png` across the entire banner behind the title and application buttons. Responsive sources let the browser choose an image for the screen size and density. The hero loads eagerly with high priority; the About figure loads lazily. CSS `object-fit: cover` preserves the hero image's proportions while cropping its edges to fill the banner. A gradual green overlay fades the artwork behind the text and along the bottom, with a stronger overlay on mobile for readability.
 
 The application button opens the Luma registration page. The paper, MARVL, and contact links are preserved.

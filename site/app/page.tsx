@@ -23,7 +23,12 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="home" aria-labelledby="hero-title">
           <div className="hero-art" aria-hidden="true">
-            <img src={assetPath('/assets/no_logo.png')} width="2380" height="2380" alt="" fetchPriority="high" />
+            <img
+              src={assetPath('/assets/hero-1600.webp')}
+              srcSet={[960, 1600, 2380].map(width => `${assetPath(`/assets/hero-${width}.webp`)} ${width}w`).join(', ')}
+              sizes="(max-width: 760px) 680px, 100vw"
+              width="2380" height="2380" alt="" fetchPriority="high" loading="eager" decoding="async"
+            />
           </div>
           <div className="hero-inner page-width">
             <div className="hero-copy">
@@ -51,7 +56,12 @@ export default function Home() {
             <p>{content.about.paragraphs[1]}</p>
           </div>
           <a className="task-figure" href={assetPath('/assets/figure-2.png')} target="_blank" rel="noopener noreferrer" aria-label="Open the full-size example MMBU tasks figure">
-            <img src={assetPath('/assets/figure-2.png')} alt="Example MMBU open VQA tasks" width="3416" height="4041" loading="lazy" />
+            <img
+              src={assetPath('/assets/figure-2-800.webp')}
+              srcSet={[800, 1600, 2400].map(width => `${assetPath(`/assets/figure-2-${width}.webp`)} ${width}w`).join(', ')}
+              sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1448px) 50vw, 640px"
+              alt="Example MMBU open VQA tasks" width="3416" height="4041" loading="lazy" decoding="async"
+            />
             <span className="figure-expand" aria-hidden="true"><MoveUpRight size={20} /></span>
           </a>
         </section>
