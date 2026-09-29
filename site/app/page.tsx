@@ -37,7 +37,7 @@ export default function Home() {
               <p className="hero-description">Advance visual perception in biomedical multimodal models.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href={registration} target="_blank" rel="noopener noreferrer">Apply to participate<ArrowUpRight size={20} /></a>
-                <a className="button button-outline" href={assetPath('/MMBU_challenge.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
+                <a className="button button-outline" href={assetPath('/MMBU_challenge_update.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Home() {
           <a className="footer-wordmark" href="#home" aria-label="MMBU home">MMBU<ArrowUpRight strokeWidth={0.8} aria-hidden="true" /></a>
           <div className="footer-bottom">
             <p>MMBU Challenge · Stanford MARVL</p>
-            <nav aria-label="Footer"><a href={assetPath('/MMBU_challenge.pdf')}>Brief<ArrowUpRight size={14} /></a><a href="https://arxiv.org/abs/2606.06696" target="_blank" rel="noopener noreferrer">Paper<ArrowUpRight size={14} /></a><a href="https://marvl.stanford.edu/" target="_blank" rel="noopener noreferrer">MARVL<ArrowUpRight size={14} /></a><a href="mailto:rdcunha@stanford.edu">Contact<ArrowUpRight size={14} /></a></nav>
+            <nav aria-label="Footer"><a href={assetPath('/MMBU_challenge_update.pdf')}>Brief<ArrowUpRight size={14} /></a><a href="https://arxiv.org/abs/2606.06696" target="_blank" rel="noopener noreferrer">Paper<ArrowUpRight size={14} /></a><a href="https://marvl.stanford.edu/" target="_blank" rel="noopener noreferrer">MARVL<ArrowUpRight size={14} /></a><a href="mailto:rdcunha@stanford.edu">Contact<ArrowUpRight size={14} /></a></nav>
           </div>
         </div>
       </footer>
