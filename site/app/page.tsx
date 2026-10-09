@@ -37,7 +37,8 @@ export default function Home() {
               <p className="hero-description">Advance visual perception in biomedical multimodal models.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href={registration} target="_blank" rel="noopener noreferrer">Apply to participate<ArrowUpRight size={20} /></a>
-                <a className="button button-outline" href={assetPath('/MMBU_challenge_update.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
+                <a className="button button-mid" href="https://huggingface.co/datasets/mmbu/mmbu-public" target="_blank" rel="noopener noreferrer">MMBU Public Data<ArrowUpRight size={18} /></a>
+                <a className="button button-deep" href={assetPath('/MMBU_challenge_update.pdf')}>Challenge brief<ArrowUpRight size={18} /></a>
               </div>
             </div>
           </div>

@@ -17,10 +17,13 @@ export function Header() {
     <div className="nav-inner page-width">
       <a href="#home" className="wordmark" aria-label="MMBU home">MMBU<span className="brand-dot" /></a>
       <nav className="desktop-nav" aria-label="Main navigation">{sections.map(section => <a key={section} href={`#${section.toLowerCase()}`}>{section}</a>)}</nav>
-      <a className="nav-brief" href={assetPath('/MMBU_challenge_update.pdf')}>Challenge brief<ArrowUpRight size={16} /></a>
+      <div className="nav-actions">
+        <a className="nav-brief nav-data" href="https://huggingface.co/datasets/mmbu/mmbu-public" target="_blank" rel="noopener noreferrer">MMBU Public Data<ArrowUpRight size={16} /></a>
+        <a className="nav-brief" href={assetPath('/MMBU_challenge_update.pdf')}>Challenge brief<ArrowUpRight size={16} /></a>
+      </div>
       <Collapsible open={open} onOpenChange={setOpen} className="mobile-navigation">
         <CollapsibleTrigger className="menu-toggle" aria-label={open ? 'Close menu' : 'Open menu'}>{open ? <X /> : <Menu />}</CollapsibleTrigger>
-        <CollapsibleContent className="mobile-menu"><nav aria-label="Mobile navigation">{sections.map(section => <a key={section} href={`#${section.toLowerCase()}`} onClick={() => setOpen(false)}>{section}<ArrowUpRight size={18} /></a>)}</nav></CollapsibleContent>
+        <CollapsibleContent className="mobile-menu"><nav aria-label="Mobile navigation"><a className="mobile-data" href="https://huggingface.co/datasets/mmbu/mmbu-public" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>MMBU Public Data<ArrowUpRight size={18} /></a>{sections.map(section => <a key={section} href={`#${section.toLowerCase()}`} onClick={() => setOpen(false)}>{section}<ArrowUpRight size={18} /></a>)}</nav></CollapsibleContent>
       </Collapsible>
     </div>
   </header>;
