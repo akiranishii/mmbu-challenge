@@ -148,6 +148,12 @@ h2 span { color: #6b7f6c; }
 .footer { color: #ecf2e8; background: var(--forest-deep); padding-block: 58px 28px; }
 .footer-wordmark { display: flex; align-items: center; justify-content: space-between; color: #cbe597; font-size: clamp(90px, 18vw, 260px); line-height: 1; letter-spacing: -.07em; font-weight: 450; padding-bottom: 50px; }
 .footer-wordmark svg { width: clamp(50px, 12vw, 160px); height: auto; }
+.footer-documents { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 48px; padding-block: 22px 26px; border-top: 1px solid #4e615080; }
+.footer-documents h2 { font-size: 14px; font-weight: 500; line-height: 1.6; letter-spacing: 0; color: #c5d1bf; }
+.footer-documents ul { display: flex; flex-wrap: wrap; gap: 8px 32px; list-style: none; margin: 0; padding: 0; }
+.footer-documents a { display: inline-flex; align-items: baseline; gap: 12px; padding-block: 8px; font-size: 14px; line-height: 1.6; text-decoration: underline; text-decoration-color: #8ea68b; text-underline-offset: 4px; }
+.footer-documents a:hover { color: var(--lime); }
+.footer-documents a span { flex-shrink: 0; font-size: 12px; color: #c5d1bf; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 28px; align-items: center; border-top: 1px solid #4e61503d; padding-top: 27px; font-size: 14px; color: #c5d1bf; }
 .footer-bottom nav { display: flex; gap: 27px; }
 .footer-bottom a { display: flex; align-items: center; gap: 5px; }
@@ -223,6 +229,8 @@ h2 span { color: #6b7f6c; }
   .question-answer { padding: 0 6px 23px 32px; }
   .footer { padding-block: 43px 25px; }
   .footer-wordmark { font-size: 23vw; padding-bottom: 36px; }
+  .footer-documents { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footer-documents ul { flex-direction: column; gap: 4px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 22px; }
   .footer-bottom nav { flex-wrap: wrap; gap: 23px; }
 }

@@ -59,7 +59,7 @@ export function Questions() {
   return <Accordion className="questions" defaultValue={['question-0']} multiple>
     {content.faq.items.map((item, index) => <AccordionItem key={item.question} value={`question-${index}`} className="question-item">
       <AccordionTrigger className="question-trigger"><span className="question-number">0{index + 1}</span><span>{item.question}</span></AccordionTrigger>
-      <AccordionContent className="question-answer" keepMounted><p dangerouslySetInnerHTML={{ __html: item.answer.replace('href="/MMBU_challenge_update.pdf"', `href="${assetPath('/MMBU_challenge_update.pdf')}"`) }} /></AccordionContent>
+      <AccordionContent className="question-answer" keepMounted><p dangerouslySetInnerHTML={{ __html: item.answer.replace(/href="(\/(?!\/)[^"]*)"/g, (_, path: string) => `href="${assetPath(path)}"`) }} /></AccordionContent>
     </AccordionItem>)}
   </Accordion>;
 }

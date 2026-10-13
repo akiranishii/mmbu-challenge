@@ -113,6 +113,13 @@ export default function Home() {
       <footer className="footer">
         <div className="page-width">
           <a className="footer-wordmark" href="#home" aria-label="MMBU home">MMBU<ArrowUpRight strokeWidth={0.8} aria-hidden="true" /></a>
+          <section className="footer-documents" id="documents" aria-labelledby="documents-title">
+            <h2 id="documents-title">Challenge documents</h2>
+            <ul>
+              <li><a href={assetPath('/documents/mmbu-challenge-official-rules.docx')} download="MMBU Challenge Official Rules.docx">MMBU Challenge Official Rules<span>DOCX</span></a></li>
+              <li><a href={assetPath('/documents/gxl-role-statement-mmbu.docx')} download="GXL Role Statement MMBU.docx">GXL Role Statement<span>DOCX</span></a></li>
+            </ul>
+          </section>
           <div className="footer-bottom">
             <p>MMBU Challenge · Stanford MARVL</p>
             <nav aria-label="Footer"><a href={assetPath('/MMBU_challenge_update.pdf')}>Brief<ArrowUpRight size={14} /></a><a href="https://arxiv.org/abs/2606.06696" target="_blank" rel="noopener noreferrer">Paper<ArrowUpRight size={14} /></a><a href="https://marvl.stanford.edu/" target="_blank" rel="noopener noreferrer">MARVL<ArrowUpRight size={14} /></a><a href="mailto:rdcunha@stanford.edu">Contact<ArrowUpRight size={14} /></a></nav>
