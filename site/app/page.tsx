@@ -116,8 +116,8 @@ export default function Home() {
           <section className="footer-documents" id="documents" aria-labelledby="documents-title">
             <h2 id="documents-title">Challenge documents</h2>
             <ul>
-              <li><a href={assetPath('/documents/mmbu-challenge-official-rules.docx')} download="MMBU Challenge Official Rules.docx">MMBU Challenge Official Rules<span>DOCX</span></a></li>
-              <li><a href={assetPath('/documents/gxl-role-statement-mmbu.docx')} download="GXL Role Statement MMBU.docx">GXL Role Statement<span>DOCX</span></a></li>
+              <li><a href={assetPath('/documents/mmbu-challenge-official-rules.pdf')} target="_blank" rel="noopener noreferrer">MMBU Challenge Official Rules<span>PDF</span></a></li>
+              <li><a href={assetPath('/documents/gxl-role-statement-mmbu.pdf')} target="_blank" rel="noopener noreferrer">GXL Role Statement<span>PDF</span></a></li>
             </ul>
           </section>
           <div className="footer-bottom">

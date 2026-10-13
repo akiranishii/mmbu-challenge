@@ -31,7 +31,7 @@ for (const value of assetUrls) {
 
 for (const path of [
   '/MMBU_challenge_update.pdf', '/favicon.svg',
-  '/documents/mmbu-challenge-official-rules.docx', '/documents/gxl-role-statement-mmbu.docx',
+  '/documents/mmbu-challenge-official-rules.pdf', '/documents/gxl-role-statement-mmbu.pdf',
   '/assets/hero-960.webp', '/assets/hero-1600.webp', '/assets/hero-2380.webp',
   '/assets/figure-2-800.webp', '/assets/figure-2-1600.webp', '/assets/figure-2-2400.webp',
   '/assets/figure-2.png', '/assets/sponsors/gxl.svg', '/assets/sponsors/anthropic.png',
